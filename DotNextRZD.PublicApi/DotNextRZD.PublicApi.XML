@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNextRZD.PublicApi</name>
+    </assembly>
+    <members>
+        <member name="T:DotNextRZD.PublicApi.Controllers.CitiesController">
+            <summary>
+                Cities controller
+            </summary>
+            <remarks>ssss</remarks>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.GetAll">
+            <summary>
+                Get all cities information
+            </summary>
+            <returns>all available cities</returns>
+            <remarks>
+                This method returns all available cities
+            </remarks>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.GetById(System.Int32)">
+            <summary>
+                Get cities by Id
+            </summary>
+            <param name="id">City Id</param>
+            <returns>Requested city</returns>
+            <response code="200">Success</response>
+            <response code="404">No city information found</response>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.Create(DotNextRZD.PublicApi.Model.CityModel)">
+            <summary>
+                Create a city information
+            </summary>
+            <param name="model">city data</param>
+            <returns>The city information created and persisted</returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.Update(DotNextRZD.PublicApi.Model.CityModel)">
+            <summary>
+                Update a city information
+            </summary>
+            <param name="model">city data</param>
+            <returns>The city information updated</returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.DeleteAll">
+            <summary>
+                Delete all cities information
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.CitiesController.DeleteById(System.Int32)">
+            <summary>
+                Delete an city information
+            </summary>
+            <param name="id">city Id</param>
+            <returns></returns>
+            <response code="404">if no city found</response>
+        </member>
+        <member name="T:DotNextRZD.PublicApi.Controllers.TrainsController">
+            <summary>
+                Trains infromation controller
+            </summary>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsController.GetAll">
+            <summary>
+                Retreive all trains infromation
+            </summary>
+            <returns>
+                Train infomormation model
+            </returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsController.GetById(System.Int32)">
+            <summary>
+                Retreive a particular trains infromation
+            </summary>
+            <param name="id">train id</param>
+            <returns>Train infomormation model</returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsFromController.GetAll(System.Int32)">
+            <summary>
+                Retreive all trains departuring from the railway station specified
+            </summary>
+            <param name="station">railway station id</param>
+            <returns>
+                Train infomormation model
+            </returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsFromController.GetById(System.Int32,System.Int32)">
+            <summary>
+                Retreive a particular train departuring from the railway station specified
+            </summary>
+            <param name="station">railway station id</param>
+            <param name="id">train id</param>
+            <returns>
+                Train infomormation model
+            </returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsToController.GetAll(System.Int32)">
+            <summary>
+                Retreive all trains arriving to the station specified
+            </summary>
+            <param name="station">station code</param>
+            <returns>
+                Train infomormation model
+            </returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsToController.GetById(System.Int32,System.Int32)">
+            <summary>
+                Retreive a particular train arriving to the station specified
+            </summary>
+            <param name="station">station code</param>
+            <param name="id">train id</param>
+            <returns>
+                Train infomormation model
+            </returns>
+        </member>
+        <member name="T:DotNextRZD.PublicApi.Controllers.RailwayStationsController">
+            <summary>
+                RailwayStations controller
+            </summary>
+            <remarks>ssss</remarks>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.GetAll11">
+            <summary>
+                Get all railway stations
+            </summary>
+            <returns>all available railway stations</returns>
+            <remarks>
+                This method returns all available railway station without any trains
+            </remarks>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.GetById(System.Int32)">
+            <summary>
+                Get railway station by Id
+            </summary>
+            <param name="id">RailwayStation Id</param>
+            <returns>Requested railway station</returns>
+            <response code="200">Success</response>
+            <response code="404">No railway station found</response>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.GetByCode(System.String)">
+            <summary>
+                Get railway station by internation railway station's code
+            </summary>
+            <param name="code">RailwayStation code</param>
+            <returns>Requested railway station</returns>
+            <response code="200">Success</response>
+            <response code="404">No railway station found</response>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.Create(DotNextRZD.PublicApi.Model.RailwayStationModel)">
+            <summary>
+                Create an railway station
+            </summary>
+            <param name="model">railway station data</param>
+            <returns>The railway station created and persisted</returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.Update(DotNextRZD.PublicApi.Model.RailwayStationModel)">
+            <summary>
+                Update an railway station
+            </summary>
+            <param name="model">railway station data</param>
+            <returns>The railway station updated</returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.DeleteAll">
+            <summary>
+                Delete all railway station
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.DeleteById(System.Int32)">
+            <summary>
+                Delete an railway station by Id
+            </summary>
+            <param name="id">railway station Id</param>
+            <returns></returns>
+            <response code="404">if no railway station found</response>
+        </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.RailwayStationsController.DeleteByCode(System.String)">
+            <summary>
+                Delete an railway station by railway station's code
+            </summary>
+            <param name="code">railway station code</param>
+            <returns></returns>
+            <response code="404">if no railway station found</response>
+        </member>
+        <member name="T:DotNextRZD.PublicApi.Handlers.NullJsonHandler">
+            <summary>
+                The purpose of this class is to intercept response and replace NULL with proper status HttpStatusCode
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.CityModel.Id">
+            <summary>
+                Id of the city
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.CityModel.Name">
+            <summary>
+                Translated to current language name of airport
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.CityModel.Latitude">
+            <summary>
+                Latitude of airport
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.CityModel.Longitude">
+            <summary>
+                Longitude of airport
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.Id">
+            <summary>
+                Internal id of railway station in the database
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.Code">
+            <summary>
+                Public (extenal) code of railway station
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.Name">
+            <summary>
+                Translated to current language name of railway station
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.CityId">
+            <summary>
+                Translated to current language name of railway station's city
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.Latitude">
+            <summary>
+                Latitude of railway station
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.RailwayStationModel.Longitude">
+            <summary>
+                Longitude of railway station
+            </summary>
+        </member>
+        <member name="T:DotNextRZD.PublicApi.Model.TrainModel">
+            <summary>
+                Train information model
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.Id">
+            <summary>
+                Internal (database) Id of the train
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.TrainNumber">
+            <summary>
+                External (public) number of the train
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.OriginRailwayStationId">
+            <summary>
+                Id of railway station from which train is started
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.OriginRailwayStationName">
+            <summary>
+                Translated to the current language name of airport from which the train is started
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.DestinationRailwayStationId">
+            <summary>
+                RailwayStation id of train's destination
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.DestinationRailwayStationName">
+            <summary>
+                Translated to the current language name of train's destination airport
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.ScheduledTime">
+            <summary>
+                Scheduled time of arrival
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.CurrentTime">
+            <summary>
+                Actual time of arrival
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.StatusCode">
+            <summary>
+                External code of train status
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.Status">
+            <summary>
+                Status of train
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.UpdatedStatus">
+            <summary>
+                True if status is updated
+            </summary>
+        </member>
+        <member name="P:DotNextRZD.PublicApi.Model.TrainModel.IsDelayed">
+            <summary>
+                true if train is delayed
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNextRZD.PublicApi", "DotNextRZD.PublicApi\DotNextRZD.PublicApi.csproj", "{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNextRZD.PublicApi.SelfHost", "DotNextRZD.PublicApi.SelfHost\DotNextRZD.PublicApi.SelfHost.csproj", "{E3A2123A-5453-4D28-BF30-AA52C094EA18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FE96BBC3-B191-48AD-B3E9-1D5A7A744B32}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Public API|Any CPU = Debug Public API|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release Public API|Any CPU = Release Public API|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Debug Public API|Any CPU.ActiveCfg = Debug Public API|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Debug Public API|Any CPU.Build.0 = Debug Public API|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Release Public API|Any CPU.ActiveCfg = Release Public API|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Release Public API|Any CPU.Build.0 = Release Public API|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Debug Public API|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Debug Public API|Any CPU.Build.0 = Debug|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release Public API|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release Public API|Any CPU.Build.0 = Release|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
