@@ -53,6 +53,15 @@ namespace DotNextRZD.PublicApi.Controllers
             return train;
         }
 
+        /// <summary>
+        ///     Count
+        /// </summary>
+        [HttpGet]
+        public long Count()
+        {
+            return testData.Count();
+        }
+
         #region Test Data
 
         internal static TrainModel[] testData;

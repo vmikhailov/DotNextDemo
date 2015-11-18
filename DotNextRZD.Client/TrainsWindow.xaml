@@ -1,0 +1,19 @@
+﻿<Window x:Class="DotNextRZD.Client.TrainsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="TrainsWindow" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:DotNextRZD.Client.ViewModels"
+        mc:Ignorable="d" 
+        d:DataContext="{d:DesignInstance viewModels:TrainsViewModel}">
+
+    <telerik:RadGridView ItemsSource="{Binding Trains}"
+                         AutoGenerateColumns="True" ShowGroupPanel="False" IsReadOnly="True" 
+								 RowIndicatorVisibility="Collapsed" BorderBrush="White" 
+								 BorderThickness="1" GridLinesVisibility="Horizontal" CanUserFreezeColumns="False"
+								 HorizontalGridLinesBrush="Black" Background="LightSteelBlue">
+        
+    </telerik:RadGridView>
+</Window>

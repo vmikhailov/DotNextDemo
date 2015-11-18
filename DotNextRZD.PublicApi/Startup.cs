@@ -6,6 +6,7 @@ using DotNextRZD.PublicApi.Swagger;
 using Microsoft.Owin;
 using Newtonsoft.Json;
 using Owin;
+using WebApiService;
 
 [assembly: OwinStartup(typeof (Startup))]
 
@@ -16,6 +17,7 @@ namespace DotNextRZD.PublicApi
         public void Configuration(IAppBuilder app)
         {
             var config = new HttpConfiguration();
+
             config.MapHttpAttributeRoutes();
 
             var jsonformatter = config.Formatters.JsonFormatter;
@@ -24,13 +26,18 @@ namespace DotNextRZD.PublicApi
 
             var xmlformatter = config.Formatters.XmlFormatter;
             xmlformatter.UseXmlSerializer = true;
+            
+            WebApiConfig.Register(config);
 
             //config.EnableSystemDiagnosticsTracing();
 
             config.MessageHandlers.Add(new NullJsonHandler());
             config.RegisterSwagger();
             config.EnsureInitialized();
+
             app.UseWebApi(config);
+
+
         }
     }
 }

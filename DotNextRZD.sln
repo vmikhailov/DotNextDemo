@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNextRZD.PublicApi", "DotNextRZD.PublicApi\DotNextRZD.PublicApi.csproj", "{5FB54C35-5484-4E9C-9F16-09E3B6AD825B}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FE96BB
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNextRZD.Client", "DotNextRZD.Client\DotNextRZD.Client.csproj", "{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,14 @@ Global
 		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release Public API|Any CPU.Build.0 = Release|Any CPU
 		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3A2123A-5453-4D28-BF30-AA52C094EA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Debug Public API|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Debug Public API|Any CPU.Build.0 = Debug|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Release Public API|Any CPU.ActiveCfg = Release|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Release Public API|Any CPU.Build.0 = Release|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36D70C3-41EB-4267-8BD7-69EAFD264F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
