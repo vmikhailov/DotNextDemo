@@ -76,6 +76,11 @@
             <param name="id">train id</param>
             <returns>Train infomormation model</returns>
         </member>
+        <member name="M:DotNextRZD.PublicApi.Controllers.TrainsController.Count">
+            <summary>
+                Count
+            </summary>
+        </member>
         <member name="M:DotNextRZD.PublicApi.Controllers.TrainsFromController.GetAll(System.Int32)">
             <summary>
                 Retreive all trains departuring from the railway station specified
