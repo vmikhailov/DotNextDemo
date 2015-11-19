@@ -15,7 +15,7 @@ namespace DotNextRZD.PublicApi.Controllers
     /// </summary>
     /// <remarks>ssss</remarks>
     [RoutePrefix(CitiesControllerRoutes.BasePrefix)]
-    [SwaggerControllerDescription("Cities", "All cities in our country")]
+    [SwaggerDescription("Cities", "All cities in our country")]
     public class CitiesController : ApiController
     {
         #region Test Data

@@ -3,14 +3,14 @@
 namespace DotNextRZD.PublicApi.Swagger
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class SwaggerControllerDescriptionAttribute : Attribute
+    public class SwaggerDescriptionAttribute : Attribute
     {
-        public SwaggerControllerDescriptionAttribute(string description)
+        public SwaggerDescriptionAttribute(string description)
         {
             ControllerDescription = description;
         }
 
-        public SwaggerControllerDescriptionAttribute(string tag, string description)
+        public SwaggerDescriptionAttribute(string tag, string description)
         {
             ControllerTag = tag;
             ControllerDescription = description;

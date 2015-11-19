@@ -10,7 +10,7 @@ using DotNextRZD.PublicApi.Swagger;
 namespace DotNextRZD.PublicApi.Controllers
 {
     [RoutePrefix(TrainsToControllerRoutes.BasePrefix)]
-    [SwaggerControllerDescription("RailwayStations", null)]
+    [SwaggerDescription("RailwayStations", null)]
     public class TrainsToController : TrainsController
     {
         private IQueryable<TrainModel> GetTrains(int code)

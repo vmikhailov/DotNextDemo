@@ -49,7 +49,7 @@ namespace DotNextRZD.PublicApi.Swagger
         private static string GetControllerGroupingKey(ApiDescription apiDesc)
         {
             var cd = apiDesc.ActionDescriptor.ControllerDescriptor;
-            var descAttr = cd.ControllerType.GetCustomAttribute<SwaggerControllerDescriptionAttribute>(false);
+            var descAttr = cd.ControllerType.GetCustomAttribute<SwaggerDescriptionAttribute>(false);
             var cname = descAttr == null || string.IsNullOrEmpty(descAttr.ControllerTag)
                 ? cd.ControllerName
                 : descAttr.ControllerTag;

@@ -16,7 +16,7 @@ namespace DotNextRZD.PublicApi.Controllers
     ///     Trains infromation controller
     /// </summary>
     [RoutePrefix(TrainsControllerRoutes.BasePrefix)]
-    [SwaggerControllerDescription("Information about all trains")]
+    [SwaggerDescription("Information about all trains")]
     public class TrainsController : ApiController
     {
         /// <summary>

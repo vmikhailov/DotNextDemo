@@ -47,7 +47,7 @@ namespace DotNextRZD.PublicApi.Swagger
                     .ToList();
             foreach (var c in controllers)
             {
-                var descAttr = c.ControllerType.GetCustomAttribute<SwaggerControllerDescriptionAttribute>(false);
+                var descAttr = c.ControllerType.GetCustomAttribute<SwaggerDescriptionAttribute>(false);
                 if (descAttr == null) continue;
                 var cname = descAttr.ControllerTag ?? c.ControllerName;
                 var tag = doc.tags.FirstOrDefault(x => x.name == cname);

@@ -15,7 +15,7 @@ namespace DotNextRZD.PublicApi.Controllers
     /// </summary>
     /// <remarks>ssss</remarks>
     [RoutePrefix(RailwayStationsControllerRoutes.BasePrefix)]
-    [SwaggerControllerDescription("RailwayStations", "Information about all railway stations")]
+    [SwaggerDescription("RailwayStations", "Information about all railway stations")]
     public class RailwayStationsController : ApiController
     {
         #region Test Data
