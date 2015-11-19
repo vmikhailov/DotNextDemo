@@ -114,6 +114,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\Module.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\TrainsFromController.cs" />
