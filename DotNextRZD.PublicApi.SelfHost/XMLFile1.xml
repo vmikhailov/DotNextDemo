@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>step1</Title>
+      <Shortcut>step1</Shortcut>
+      <Description>Insert dotnext demo step 1</Description>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[Console.WriteLine("Hello, World!")]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b03f83c7-e010-43e8-9817-27bd72db00a7" name="RZD2" linkedPackageId="991dc92a-7951-41e3-893f-053dce145830" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c33b9b3-1aab-41c8-8c96-c22f5bc7d691" name="Station" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e43188ac-2f8f-4d2c-8f5e-bd660cae3597" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="80ee1854-f59d-4b12-8791-10abb0f5c703" name="Train" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="24953c06-9bd0-4e5a-aa92-9ad2c8a92561" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5a39d933-0e8e-44d8-b9d3-fee20377afe2" name="TimeTable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b1f8aeea-c660-4f57-bfd8-4b6cb00569df" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a8c64678-19b0-4d47-92a2-e69f8e3f4ba0" name="TimeTableRecord" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7bf4e988-cc7b-460a-9a5d-230da17b1e64" />
+        <targetEnds>
+          <association Id="842dd90a-48e0-4cc7-be93-31c0ab1328a8" isDerived="false" sourceEndRoleName="TimeTableRecord" targetEndRoleName="TimeTable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5a39d933-0e8e-44d8-b9d3-fee20377afe2" LastKnownName="TimeTable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f935d5b-3e83-489b-bac1-3fe43f57a0f3" name="TimeTableRecord" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="facbbe1b-5fce-4c5c-8495-04adf3912f1d" name="Lower" value="*">
+                      <elementDefinition Id="46954728-fa51-4e44-b89a-15b8223cc09f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8c995092-f6e4-413f-9c5d-1ad61909ec47" name="Upper" value="*">
+                      <elementDefinition Id="34caa1a3-05b0-4589-81f0-6972ee289c38" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="ae667ee6-fe70-4ad3-803f-dbabe74b01b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e5da6e6-8d44-4be6-b50b-79ce04b02ea1" name="TimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="029a9a9f-2359-44ff-9bd5-3239c6005cc9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5bab2207-d129-48fd-9e28-b1d72c9a502d" />
+          </association>
+          <association Id="ab9b32f3-9692-4155-a2ab-6855f9953976" isDerived="false" sourceEndRoleName="TimeTableRecord" targetEndRoleName="Station" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8c33b9b3-1aab-41c8-8c96-c22f5bc7d691" LastKnownName="Station" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be76cc96-5bcc-4a38-9355-5a5033ed4ccd" name="TimeTableRecord" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c1c28765-d156-4004-8d52-84818ba9d8f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45af53f0-adef-4933-b4f6-8a29daaa91ad" name="Station" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dfc4bbab-63f1-4e4b-b487-0357f57d1e10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eab38f4c-f69f-4443-84a7-652544ab3bdd" />
+          </association>
+          <association Id="52841044-6457-4596-9872-a21381bc4e07" isDerived="false" sourceEndRoleName="TimeTableRecord" targetEndRoleName="Train" isLeaf="false" isAbstract="false">
+            <classMoniker Id="80ee1854-f59d-4b12-8791-10abb0f5c703" LastKnownName="Train" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6ec5e2b-1973-4471-979e-08324f0795a6" name="TimeTableRecord" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9c3d96a4-304f-4499-b0d2-109ffdedb442" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b32c42e-d523-4ae7-b79d-22a300eef40a" name="Train" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="17e6a374-9d45-44ee-b6ee-793bd2a288a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="59026996-201b-4a52-9860-a2bea8f3caca" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c146a106-02f7-4d50-8a31-347dec5fa068" name="TicketRequest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5c99542-ea45-4aab-b336-2de325e17e70" />
+        <targetEnds>
+          <association Id="ce7133f2-3197-4ec9-8e4a-25ffae2768e3" isDerived="false" sourceEndRoleName="TicketRequest" targetEndRoleName="Profile" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1779b8ff-5221-48a6-91ce-65f5a0735175" LastKnownName="Profile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="11f14496-8321-4790-9b55-a9665cea4eb9" name="TicketRequest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="631c4f5a-63dd-4550-be19-4d17b2557c6c" name="Lower" value="*">
+                      <elementDefinition Id="286b074e-bf88-4f2d-9933-305d89bce13a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c4532008-084a-4e6f-854a-d57ff6f78377" name="Upper" value="*">
+                      <elementDefinition Id="40b6f3aa-0f9d-4096-acd4-4183c67da654" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="446b1fe7-6b1d-46a3-bda4-a385b9810e82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10e68255-a6f1-4338-a2ff-2888bffbf4fa" name="Profile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="cdc21ba9-e8f5-4d57-85c1-a2c42bd9b032" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="720aa436-814f-4709-8dce-9d62ed82bedd" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a44ea736-aa20-49b8-833e-7d297038487e" name="Confirmed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8044c1b1-ed47-4e31-8e25-0907f537c0ac" />
+          </property>
+          <property Id="0d013131-e4c1-44ba-9e4c-f995841b4d04" name="Approved" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f54383e1-2eab-447c-89a7-3e7631dc4d28" />
+          </property>
+          <property Id="f1a3115c-b33b-4390-98e4-265a32c0b0f5" name="Paid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="98650edb-f650-4e75-be30-28cbba6b1e5d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1779b8ff-5221-48a6-91ce-65f5a0735175" name="Profile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5249af62-0c91-43c2-930f-dd4eee68cd11" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e18580e1-d432-4a3e-a616-3986ce101bea" name="Ticket" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="06fb8368-b164-4478-b439-568b1b5c1f08" />
+        <targetEnds>
+          <association Id="6c5429eb-4d51-4328-914e-20b1e8592a64" isDerived="false" sourceEndRoleName="Ticket" targetEndRoleName="Profile" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1779b8ff-5221-48a6-91ce-65f5a0735175" LastKnownName="Profile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d787568-1e9e-4b81-8734-76f4bbbdd526" name="Ticket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b014f3d6-5996-430a-b548-8b9ad73f60ea" name="Lower" value="*">
+                      <elementDefinition Id="f08bfa26-5dc3-4f35-a4a3-a7ec929aa6c0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f6f4afe6-3605-4b20-91e3-c42b9f2d15fb" name="Upper" value="*">
+                      <elementDefinition Id="fe65cd69-ec64-44b5-ad5f-5d101875c64d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="9aaac36a-72e9-4786-b9e5-b6f1f782e0e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13cf3763-7e6e-4213-9128-a9ad6211dd04" name="Profile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="41a637ff-4f1f-4866-be7c-ccbd82826a3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f5d2f6a2-58a4-4dd4-88b3-dbe186567c43" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0dd41d91-9719-4abe-8d22-361e94c79da9" name="TicketRequestPassengerInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f57c82a0-67ca-4291-aa4c-98da6350def7" />
+        <targetEnds>
+          <association Id="e211a7c3-a2ea-463e-8532-b454e0aea091" isDerived="false" sourceEndRoleName="Passenger" targetEndRoleName="TicketRequest" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c146a106-02f7-4d50-8a31-347dec5fa068" LastKnownName="TicketRequest" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="74602bb0-4756-4263-a383-0c0b3f659317" name="Passenger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b01f7d9b-dfad-4374-bced-51ebf60cc626" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92b5d19d-9097-43fd-a0e2-c82ee557adbd" name="TicketRequest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="ee5ddca7-389e-4903-be14-7ffb4960193d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0dd8db5-fb05-418d-81f2-0368d3bd9585" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d73b2830-4119-4f50-9265-07c564a8e818" name="TicketPassengerInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5c0f6138-e076-44c9-b044-1c7cb77d2171" />
+        <targetEnds>
+          <association Id="b42a961b-056c-4229-b17e-bded7190ea77" isDerived="false" sourceEndRoleName="TicketPassengerInfo" targetEndRoleName="Ticket" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e18580e1-d432-4a3e-a616-3986ce101bea" LastKnownName="Ticket" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="829f14d9-2cdd-4fcc-a743-25d04cdff536" name="TicketPassengerInfo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4dbb71cf-51d7-46a5-b7cc-27b51f74ff76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9bc0c737-663e-4287-a4bc-055029970605" name="Ticket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="fc1ba3f4-2598-4750-b341-4f9e533bc98e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ca6cc25d-a135-4076-977b-ee4573d4d61a" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="68aa477d-220d-4213-99d1-a6ae4ae20ae5" name="SeatPreference" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ab9f7344-f836-4f02-b2b4-0822fdc57c3d" />
+        <targetEnds>
+          <association Id="a4e11657-bf91-4ed3-96b3-ba9ae7522638" isDerived="false" sourceEndRoleName="SeatInfo1" targetEndRoleName="TicketRequest" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c146a106-02f7-4d50-8a31-347dec5fa068" LastKnownName="TicketRequest" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="368e16db-6c45-4c2c-bcdc-633094557bbf" name="SeatInfo1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f597ca3-41ce-4b49-ab9d-e2bde8aefd98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb32a692-d947-4090-a6e1-60a49d8fc71f" name="TicketRequest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="571ddcb9-7c57-4859-b8e2-28fbce87f2a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a548c6b-9211-4006-b774-7addd82f1315" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d187a267-8de3-4e5f-b4a1-efe2f6b88238" name="SeatInfo11" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f33368b5-023c-46ae-9d6e-5cf0f3f55f1c" />
+        <targetEnds>
+          <association Id="a9c3bac7-fc02-49ec-a256-b6cd619c5a3d" isDerived="false" sourceEndRoleName="SeatInfo11" targetEndRoleName="Ticket" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e18580e1-d432-4a3e-a616-3986ce101bea" LastKnownName="Ticket" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9883f43-6b0a-440f-9040-7ce2e9393cf5" name="SeatInfo11" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b447612-bd67-4c82-8111-d89ba6a21b72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17403742-ee11-4761-8d93-eeb273d7e0c4" name="Ticket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="ca10b8b0-f9cb-46aa-87b6-8490c480bb1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="da24796d-4ca7-4c6c-b2fe-68efe28c0edb" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="991dc92a-7951-41e3-893f-053dce145830" name="ModelingProject">
+    <elementDefinition Id="609e02f0-9527-4a49-ae74-457ab2f79072" />
+    <profileInstances>
+      <packageHasProfileInstances Id="fe126382-7120-4e5f-a30d-b88d3e32ec54">
+        <profileInstance Id="57e874c5-2a9e-4a45-9e97-ce02b4012701" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7adc457e-0b59-4834-bab4-bbd159228190">
+        <profileInstance Id="26499b9a-c0cd-4e4e-995a-25aa5af96165" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
