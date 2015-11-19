@@ -30,9 +30,9 @@ namespace DotNextRZD.PublicApi.Controllers
         [HttpGet]
         [Route(TrainsFromControllerRoutes.GetAll)]
         [EnableQuery]
-        public Task<IQueryable<TrainModel>> GetAll(int station)
+        public IQueryable<TrainModel> GetAll(int station)
         {
-            return Task.FromResult(GetTrains(station));
+            return GetTrains(station);
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace DotNextRZD.PublicApi.Controllers
         /// </returns>
         [HttpGet]
         [Route(TrainsFromControllerRoutes.GetById)]
-        public Task<TrainModel> GetById(int station, int id)
+        public TrainModel GetById(int station, int id)
         {
-            return Task.FromResult(GetTrains(station).SingleOrDefault(x => x.Id == id));
+            return GetTrains(station).SingleOrDefault(x => x.Id == id);
         }
     }
 }

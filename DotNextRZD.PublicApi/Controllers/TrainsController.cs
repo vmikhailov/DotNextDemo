@@ -28,9 +28,9 @@ namespace DotNextRZD.PublicApi.Controllers
         [HttpGet]
         [Route(TrainsControllerRoutes.GetAll)]
         [EnableQuery]
-        public Task<IQueryable<TrainModel>> GetAll()
+        public IQueryable<TrainModel> GetAll()
         {
-            return Task.FromResult(testData.AsQueryable());
+            return testData.AsQueryable();
         }
 
         /// <summary>

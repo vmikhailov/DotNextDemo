@@ -131,6 +131,7 @@
     <Compile Include="Routes\TrainsControllerRoutes.cs" />
     <Compile Include="Routes\RailwayStationsControllerRoutes.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Config\Module.cs" />
     <Compile Include="Swagger\CustomSwaggerProvider.cs" />
     <Compile Include="Swagger\SwaggerDescriptionAttribute.cs" />
     <Compile Include="Swagger\SwaggerInitialization.cs" />
