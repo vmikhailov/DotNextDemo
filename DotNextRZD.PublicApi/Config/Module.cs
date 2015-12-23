@@ -2,7 +2,7 @@
 using System.Web.OData.Builder;
 using System.Web.OData.Extensions;
 using DotNextRZD.PublicApi.Handlers;
-using DotNextRZD.PublicApi.Model;
+using DotNextRZD.PublicApi.Models;
 using Newtonsoft.Json;
 
 namespace DotNextRZD.PublicApi.Config
@@ -11,10 +11,8 @@ namespace DotNextRZD.PublicApi.Config
     {
         public static void RegisterWebApi(this HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
+            config.MapHttpAttributeRoutes(new CentralizedPrefixProvider("api/v1"));
             config.ConfigureFormatters();
-            //config.ConfigureOData();
-            //config.EnableSystemDiagnosticsTracing();
         }
 
         public static void ConfigureFormatters(this HttpConfiguration config)
@@ -22,6 +20,7 @@ namespace DotNextRZD.PublicApi.Config
             var jsonformatter = config.Formatters.JsonFormatter;
             jsonformatter.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             jsonformatter.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Ignore;
+            jsonformatter.SerializerSettings.Formatting = Formatting.Indented;
             var xmlformatter = config.Formatters.XmlFormatter;
             xmlformatter.UseXmlSerializer = true;
 
@@ -30,16 +29,18 @@ namespace DotNextRZD.PublicApi.Config
 
         public static void ConfigureOData(this HttpConfiguration config)
         {
-            config.AddODataQueryFilter();
+            //config.AddODataQueryFilter();
 
-            var builder = new ODataConventionModelBuilder {ContainerName = "DotNextDataContext"};
-            builder.EntitySet<TrainModel>("Trains");
-            builder.EntitySet<CityModel>("Cities");
-            builder.EntitySet<RailwayStationModel>("RailwayStations");
-            config.MapODataServiceRoute(
-                routeName: "ODataRoute",
-                routePrefix: null,
-                model: builder.GetEdmModel());
+            //var builder = new ODataConventionModelBuilder {ContainerName = "DotNextDataContext"};
+            //builder.EntitySet<TripModel>("Trains");
+            //builder.EntitySet<CityModel>("Cities");
+            //builder.EntitySet<RailwayStationModel>("RailwayStations");
+            //config.MapODataServiceRoute(
+            //    routeName: "ODataRoute",
+            //    routePrefix: null,
+            //    model: builder.GetEdmModel());
         }
     }
-}
+} 
+//config.ConfigureOData();
+            //config.EnableSystemDiagnosticsTracing();

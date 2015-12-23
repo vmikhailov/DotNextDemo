@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
-using DotNextRZD.PublicApi.Model;
+using DotNextRZD.PublicApi.Models;
 using DotNextRZD.PublicApi.Routes;
 using DotNextRZD.PublicApi.Swagger;
 
@@ -13,11 +14,16 @@ namespace DotNextRZD.PublicApi.Controllers
     [SwaggerControllerDescription("RailwayStations", null)]
     public class TrainsToController : TrainsController
     {
-        private IQueryable<TrainModel> GetTrains(int code)
+        private IQueryable<TrainTripModel> GetTrains(int code)
         {
             var cmp = StringComparer.CurrentCultureIgnoreCase;
-            var filtered = testData.AsQueryable().Where(x => cmp.Compare(x.DestinationRailwayStationId, code) == 0);
-            return filtered;
+            int i = 1;
+            var l = new List<TrainTripModel>();
+            foreach (var t in testData.AsQueryable().Where(x => cmp.Compare(x.DestinationRailwayStationId, code) == 0))
+            {
+                l.Add(new TrainTripModel() {Id = i++, Train = t});
+            }
+            return l.AsQueryable();
         }
 
         /// <summary>
@@ -30,9 +36,9 @@ namespace DotNextRZD.PublicApi.Controllers
         [HttpGet]
         [Route(TrainsToControllerRoutes.GetAll)]
         [EnableQuery]
-        public Task<IQueryable<TrainModel>> GetAll(int station)
+        public IQueryable<TrainTripModel> GetAll(int station)
         {
-            return Task.FromResult(GetTrains(station));
+            return GetTrains(station);
         }
 
         /// <summary>
@@ -45,9 +51,9 @@ namespace DotNextRZD.PublicApi.Controllers
         /// </returns>
         [HttpGet]
         [Route(TrainsToControllerRoutes.GetById)]
-        public Task<TrainModel> GetById(int station, int id)
+        public TrainTripModel GetById(int station, int id)
         {
-            return Task.FromResult(GetTrains(station).SingleOrDefault(x => x.Id == id));
+            return GetTrains(station).SingleOrDefault(x => x.Id == id);
         }
     }
 }

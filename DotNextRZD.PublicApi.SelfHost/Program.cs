@@ -16,6 +16,7 @@ namespace DotNextRZD.PublicApi.SelfHost
             {
                 Console.WriteLine("Host started. Press any key to warp up");
                 Console.ReadLine();
+                
                 // Create HttpCient and make a request to api/values 
                 var client = new HttpClient();
 
@@ -33,9 +34,9 @@ namespace DotNextRZD.PublicApi.SelfHost
                 int n = 1000;
                 for (int i = 0; i < n; i++)
                 {
-                    var addr = string.Format("{0}/trains/{1}", baseAddress, (i+1) % 15);
+                    var addr = string.Format("{0}/trains/{1}", baseAddress, (i + 1) % 15);
                     var response = client.GetAsync(addr).Result;
-                    if (i%10 == 0)
+                    if (i % 10 == 0)
                     {
                         Console.Write(".");
                     }

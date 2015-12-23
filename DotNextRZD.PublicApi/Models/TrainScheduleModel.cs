@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace DotNextRZD.PublicApi.Model
+namespace DotNextRZD.PublicApi.Models
 {
     /// <summary>
     ///     Train information model
     /// </summary>
-    public class TrainModel
+    public class TrainScheduleModel
     {
         /// <summary>
         ///     Internal (database) Id of the train
@@ -42,29 +42,5 @@ namespace DotNextRZD.PublicApi.Model
         /// </summary>
         public DateTime ScheduledTime { get; set; }
 
-        /// <summary>
-        ///     Actual time of arrival
-        /// </summary>
-        public DateTime CurrentTime { get; set; }
-
-        /// <summary>
-        ///     External code of train status
-        /// </summary>
-        public string StatusCode { get; set; }
-
-        /// <summary>
-        ///     Status of train
-        /// </summary>
-        public string Status { get; set; }
-
-        /// <summary>
-        ///     True if status is updated
-        /// </summary>
-        public bool UpdatedStatus { get; set; }
-
-        /// <summary>
-        ///     true if train is delayed
-        /// </summary>
-        public bool? IsDelayed { get; set; }
     }
 }

@@ -4,7 +4,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.OData;
-using DotNextRZD.PublicApi.Model;
+using Climax.Web.Http.Services.Versioning;
+using DotNextRZD.PublicApi.Models;
 using DotNextRZD.PublicApi.Routes;
 using DotNextRZD.PublicApi.Swagger;
 
@@ -14,7 +15,8 @@ namespace DotNextRZD.PublicApi.Controllers
     ///     Cities controller
     /// </summary>
     /// <remarks>ssss</remarks>
-    [RoutePrefix(CitiesControllerRoutes.BasePrefix)]
+    [VersionedRoute(CitiesControllerRoutes.BasePrefix, Version = 2)]
+    //[RoutePrefix(CitiesControllerRoutes.BasePrefix)]
     [SwaggerControllerDescription("Cities", "All cities in our country")]
     public class CitiesController : ApiController
     {
@@ -59,10 +61,7 @@ namespace DotNextRZD.PublicApi.Controllers
             var city = testData.SingleOrDefault(x => x.Id == id);
             if (city == null)
             {
-                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound)
-                {
-                    Content = new StringContent("no city found by id")
-                });
+                throw ErrorResponse.CreateException(HttpStatusCode.NotFound, "no city found by id");
             }
             return city;
         }

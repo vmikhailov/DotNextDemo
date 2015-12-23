@@ -1,4 +1,4 @@
-﻿namespace DotNextRZD.PublicApi.Model
+﻿namespace DotNextRZD.PublicApi.Models
 {
     public class CityModel
     {

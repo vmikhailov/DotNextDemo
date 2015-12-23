@@ -1,4 +1,7 @@
-﻿namespace DotNextRZD.PublicApi.Model
+﻿using System;
+using System.Collections.Generic;
+
+namespace DotNextRZD.PublicApi.Models
 {
     public class RailwayStationModel
     {
@@ -31,5 +34,15 @@
         ///     Longitude of railway station
         /// </summary>
         public decimal Longitude { get; set; }
+
+        public List<StationService> Services { get; set;} 
+    }
+
+    public class StationService
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime OpeningTime { get; set; }
+        public DateTime ClosingTime { get; set; }
     }
 }

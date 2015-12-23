@@ -4,9 +4,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.OData;
-using DotNextRZD.PublicApi.Model;
+using DotNextRZD.PublicApi.Models;
 using DotNextRZD.PublicApi.Routes;
 using DotNextRZD.PublicApi.Swagger;
+using System.Collections.Generic;
 
 namespace DotNextRZD.PublicApi.Controllers
 {
@@ -31,22 +32,23 @@ namespace DotNextRZD.PublicApi.Controllers
             new RailwayStationModel {Id = 7, CityId = 77, Name = "Рижский вокзал"},
             new RailwayStationModel {Id = 8, CityId = 77, Name = "Савёловский вокзал"},
             new RailwayStationModel {Id = 9, CityId = 77, Name = "Ярославский вокзал"},
-            new RailwayStationModel {Id = 10, CityId = 78, Name = "Московский вокзал"},
+            new RailwayStationModel
+            {
+                Id = 10,
+                CityId = 78,
+                Name = "Московский вокзал",
+                Services = new List<StationService>
+                {
+                    new StationService() {Name = "Туалет"},
+                    new StationService() {Name = "Касса"}
+                }
+            },
             new RailwayStationModel {Id = 11, CityId = 78, Name = "Финляндский вокзал"},
             new RailwayStationModel {Id = 12, CityId = 78, Name = "Балтийский вокзал"},
             new RailwayStationModel {Id = 13, CityId = 78, Name = "Ладожский вокзал"}
         };
 
         #endregion
-
-
-        [HttpGet]
-        [Route(RailwayStationsControllerRoutes.GetAll)]
-        public RailwayStationModel[] GetAll()
-        {
-            return testData;
-        }
-
 
         /// <summary>
         ///     Get all railway stations
@@ -55,12 +57,12 @@ namespace DotNextRZD.PublicApi.Controllers
         /// <remarks>
         ///     This method returns all available railway station without any trains
         /// </remarks>
-        //[HttpGet]
-        //[Route(RailwayStationsControllerRoutes.GetAll)]
+        [HttpGet]
+        [Route(RailwayStationsControllerRoutes.GetAll)]
         [EnableQuery()]
-        public IQueryable<RailwayStationModel> GetAll11()
+        public IQueryable<RailwayStationModel> GetAll()
         {
-            return testData.AsQueryable().Take(100);
+            return testData.AsQueryable();
         }
 
         /// <summary>
@@ -98,10 +100,7 @@ namespace DotNextRZD.PublicApi.Controllers
         {
             if (station == null)
             {
-                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound)
-                {
-                    Content = new StringContent("no railway station found by id")
-                });
+                throw ErrorResponse.CreateException(HttpStatusCode.NotFound, "no railway station found by id");
             }
             return station;
         }

@@ -4,9 +4,9 @@ using DotNextRZD.PublicApi.Config;
 using DotNextRZD.PublicApi.Swagger;
 using Microsoft.Owin;
 using Owin;
+#pragma warning disable 1591
 
 [assembly: OwinStartup(typeof (Startup))]
-
 namespace DotNextRZD.PublicApi
 {
     public class Startup
@@ -17,7 +17,6 @@ namespace DotNextRZD.PublicApi
 
             config.RegisterWebApi();
             config.RegisterSwagger();
-
             config.EnsureInitialized();
             app.UseWebApi(config);
         }
